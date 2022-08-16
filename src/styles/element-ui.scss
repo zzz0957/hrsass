@@ -1,0 +1,49 @@
+// 改写element，涵盖一些元素ui样式
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+
+// 固定https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// 优化元素UI上传
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// 可折叠的，可展开的
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+// 修复el-date-pick CSS样式
+.el-range-separator {
+  box-sizing: content-box;
+}
